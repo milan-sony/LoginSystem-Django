@@ -18,16 +18,33 @@ def signup(request):
     pass1 = request.POST['pass1']
     pass2 = request.POST['pass2']
 
-    myusers = User.objects.create_user(uname, email, pass1)
-    myusers.first_name = fname
-    myusers.last_name = lname
-
-    myusers.save()
-    messages.success(request,"Your Account Has been Successfully Created")
-    return redirect('signup')
-
+    if pass1 == pass2:
+      if User.objects.filter(username=uname).exists():
+        messages.warning(request,"Username Already Exist")
+      elif User.objects.filter(email=email).exists():
+        messages.warning(request,"Email Already Exist")
+      else:
+        user = User.objects.create_user(username=uname,first_name=fname,last_name=lname,email=email,password=pass1)
+        user.save()
+        messages.success(request,"Your Account Has been Successfully Created")
+        return redirect('signup')
+    else:
+      messages.warning(request,"Password Is Not Matching")
   return render(request,"signup.html")
 
 #signin page
-def login(request):
-  return render(request,"login.html")
+# def login(request):
+  # if request.method == 'POST':
+    # uname = request.POST['uname']
+    # pass1 = request.POST['pass1']
+
+    # User = authenticate(uname = uname, pass1 = pass1)
+
+    # if User is not None:
+      # login(request, User)
+      # return render(request,"userhomepage.html")
+    # else:
+      # messages.error(request,"Your Credentials Doesn't Match")
+      # return redirect('login')
+
+  # return render(request,"login.html")
