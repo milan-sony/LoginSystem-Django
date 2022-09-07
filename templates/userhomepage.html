@@ -1,13 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+Userhomepage
+{% endblock %}
+
+{% block style %}
+{% load static %}
+<!-- <link rel="stylesheet" href="{% static 'authentication/css/style.css' %}"> -->
+{% endblock %}
+
+{% block body %}
+
+{% if request.user.is_authenticated %}
   <h3>Hello, {{user.first_name}}</h3>
-  <a href="{% url 'logout' %}">Logout</a>
-</body>
-</html>
+  <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+{% else %}
+  <h3>The User is not Authenticated</h3>
+{% endif %}
+
+{% endblock %}
