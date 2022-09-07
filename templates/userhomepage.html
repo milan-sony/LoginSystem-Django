@@ -12,8 +12,8 @@ Userhomepage
 {% block body %}
 
 {% if request.user.is_authenticated %}
-  <h3>Hello, {{user.first_name}}</h3>
-  <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+  <h3 class="text-center mt-5">Hello, {{user.first_name}}</h3>
+  <h3 class="text-center mt-3"><a href="{% url 'logout' %}" class="btn btn-primary">Logout</a></h3>
 {% else %}
   <h3>The User is not Authenticated</h3>
 {% endif %}

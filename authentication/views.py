@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 # https://stackoverflow.com/questions/39316948/typeerror-login-takes-1-positional-argument-but-2-were-given
 # Your view has the same name as the auth login function, so it is hiding it. Change the view name, or import the function under a different name eg from django.contrib.auth import login as auth_login.
 from django.contrib.auth import login as auth_login
+from django.contrib.auth import logout as auth_logout
 from django.contrib.auth import authenticate, logout
 from django.contrib import messages
 
@@ -61,5 +62,5 @@ def login(request):
 
 #logout
 def logout(request):
-  logout(request)
+  auth_logout(request)
   return redirect('/')

@@ -11,8 +11,10 @@ WELCOME
 
 {% block body %}
 
-<h1>User Login Sytem</h1>
-<a href="{% url 'signup' %}" class="btn btn-primary">SignUp</a>
+<h1 class="text-center mt-5">User Login Sytem</h1>
+<h2 class="text-center mt-3">
+<a href="{% url 'signup' %}" class="btn btn-primary mr-3">SignUp</a>
 <a href="{% url 'login' %}" class="btn btn-outline-primary">Login</a>
+</h2>
 
 {% endblock %}
