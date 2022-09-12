@@ -28,6 +28,7 @@ Login
             <input type="password" name="password" placeholder="Enter Your Password" class="form-control" required autocomplete="off">
           </div>
           <input type="submit" value="SignUp" class="btn btn-primary form-control">
+          <p class="text-center pt-3"><a href="{% url 'signup' %}">Dont have an account? SignUp Here!</a></p>
         </form>
         {% if messages %}
         {% for message in messages %}

@@ -44,6 +44,7 @@ SignUp
             <input type="password" name="pass2" placeholder="Confirm Your Password" class="form-control" required autocomplete="off">
           </div>
           <input type="submit" value="SignUp" class="btn btn-primary form-control">
+          <p class="text-center pt-3"><a href="{% url 'login' %}">Already have an account? Login Here!</a></p>
         </form>
         {% if messages %}
         {% for message in messages %}
