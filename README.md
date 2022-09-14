@@ -1,6 +1,7 @@
-# Django-CRUD_MySQL
+# User-Login_System-Django
 
-This is a simple project that performs CRUD operations in Django using Mysql database.
+This is a simple User login system using django's default user model
+
 ## Run Locally
 You will need to install Python on  you system. Head over to https://www.python.org/downloads/ to download python.
 (Dont Forget to Tick Add to Path while installing Python)
