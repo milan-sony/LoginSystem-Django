@@ -10,7 +10,7 @@ Once you have downloaded Python on your system,
 run the following command inside your terminal
 
 ```bash
-  git clone https://github.com/milan-sony/User-Login_System-Django.git
+  git clone https://github.com/milan-sony/User_Login_System-Django.git
 ```
 
 Then go to the project folder
