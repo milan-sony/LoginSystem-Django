@@ -1,4 +1,4 @@
-# User-Login_System-Django
+# User_Login_System-Django
 
 This is a simple User login system using django's default user model
 
