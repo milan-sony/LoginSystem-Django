@@ -1,6 +1,6 @@
 # User_Login_System-Django
 
-This is a simple User login system using django's default user model
+This is a simple User login system build with django's default user model
 
 ## Run Locally
 You will need to install Python on  you system. Head over to https://www.python.org/downloads/ to download python.
