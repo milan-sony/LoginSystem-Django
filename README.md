@@ -1,4 +1,4 @@
-# User_Login_System-Django
+# user_login_system-django
 
 This is a simple User login system build with django's default user model
 
@@ -10,13 +10,13 @@ Once you have downloaded Python on your system,
 run the following command inside your terminal
 
 ```bash
-  git clone https://github.com/milan-sony/User_Login_System-Django.git
+  git clone https://github.com/milan-sony/user_login_system-django.git
 ```
 
 Then go to the project folder
 
 ```bash
-  cd User-Login_System-Django
+  cd user_login_system-django
 ```
 
 (This is optional, but strongly recommended) Make a virtual environment
